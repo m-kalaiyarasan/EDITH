@@ -23,5 +23,14 @@ https://www.flipkart.com/zwollex-open-ear-bluetooth-bone-conduction-sport-ear-he
 
 https://www.flipkart.com/mh-brand-open-ear-wireless-headphones-mic-bone-conduction-7h-playtime-bluetooth-headset/p/itmd86ce3e8e0759?pid=ACCGV68QR3GF8TZH&lid=LSTACCGV68QR3GF8TZHCJH5KJ&marketplace=FLIPKART&cmpid=content_headphone_8965229628_gmc 
 
+----------------------------------------components------------------------------------------------------------------------------------
+
+
+
+microcontroler-ESP32-CAM : https://www.electronicscomp.com/esp32-cam-wifi-module-bluetooth-with-ov2640-camera-module-2mp-for-face-recognization
+
+
+Audio system (BCS) : https://www.flipkart.com/mh-brand-open-ear-wireless-headphones-mic-bone-conduction-7h-playtime-bluetooth-headset/p/itmd86ce3e8e0759?pid=ACCGV68QR3GF8TZH&lid=LSTACCGV68QR3GF8TZHCJH5KJ&marketplace=FLIPKART&cmpid=content_headphone_8965229628_gmc  
+ 
 
 
