@@ -23,8 +23,8 @@ def greet():
     elif 12 <= hour < 18:
         speak("Good afternoon, sir. How can I assist you today?")
     else:
-        # speak("Good evening, sir. How can I assist you today?")
-        speak(", sir, iam ready")
+        speak(",Good evening, sir. How can I assist you today?")
+        # speak(", sir, iam ready")
 
 # Function to take user command via voice
 def take_command():
@@ -56,7 +56,7 @@ def execute_command(query):
     elif 'open google' in query:
         webbrowser.open("https://www.google.com")
     elif 'play music' in query:
-        music_dir = 'C:\\Music'  # Change this to your music directory
+        music_dir = 'E:\\music\\hck'  # Change this to your music directory
         songs = os.listdir(music_dir)
         os.startfile(os.path.join(music_dir, songs[0]))
     elif 'the time' in query:
@@ -65,6 +65,8 @@ def execute_command(query):
     elif 'exit' in query:
         speak("Goodbye, sir. Have a great day!")
         exit()
+    # elif 'scan' or 'ip' in query:
+
 
 # Main function to control the flow of the program
 def main():
