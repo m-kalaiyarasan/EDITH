@@ -40,6 +40,15 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
+# def greet():
+#     hour = datetime.datetime.now().hour
+#     if 0 <= hour < 12:
+#         engine.say("Good morning, sir. How can I assist you today?")
+#     elif 12 <= hour < 18:
+#         engine.say("Good afternoon, sir. How can I assist you today?")
+#     else:
+#         engine.say(",Good evening, sir. How can I assist you today?")
+
 def take_command():
     with sr.Microphone() as source:
         print("Listening...")
@@ -88,9 +97,9 @@ def generate_response(user_input):
 
     elif 'open' in user_input_tokens:
         if 'youtube' in user_input_tokens:
-            print("Opening YouTube")
+            print("sure sir, Opening YouTube")
             webbrowser.open("https://www.youtube.com")
-            return "Opening YouTube"
+            return "sure sir, Opening YouTube"
         elif 'google' in user_input_tokens:
             print("Opening Google")
             webbrowser.open("https://www.google.com")
@@ -113,9 +122,10 @@ def generate_response(user_input):
         current_time = datetime.datetime.now().strftime("%H:%M")
         return f"The current time is {current_time}"
 
-    elif 'exit' in user_input_tokens:
-        speak("Goodbye, sir. Have a great day!")
-        exit()
+    elif 'thanks' or 'thank' or 'thankyou' in user_input_tokens:
+        if 'exit' or 'go' or 'bye' or 'later' in user_input:
+            speak("Goodbye, sir. Have a great day!")
+            exit()
 
     # Time API
     if "time" in user_input_tokens:
@@ -155,6 +165,14 @@ def generate_response(user_input):
 # Main interaction loop
 if __name__ == "__main__":
     print("Type 'quit' to exit")
+    # hour = datetime.datetime.now().hour
+    # # if 0 <= hour < 12:
+    #     engine.say("Good morning, sir. How can I assist you today?")
+    # elif 12 <= hour < 18:
+    #     engine.say("Good afternoon, sir. How can I assist you today?")
+    # else:
+    #     engine.say(",Good evening, sir. How can I assist you today?")
+    # greet()
     while True:
         user_input = take_command()
         if user_input.lower() == 'quit':
