@@ -16,16 +16,16 @@ engine = pyttsx3.init()
 conversations = [
     ("Hello", "Hi there!"),
     ("who are you", "I am Denver."),
-    ("How are you?", "I'm fine, thank you."),
+    ("How are you?", "I'm fine sir, thank you."),
     ("What's your name?", "My name is Denver."),
     ("what's going on", "Nothing much, sir."),
     ("who are you", "I am Denver."),
     ("Hi", "Hello! How can I assist you today?"),
-    ("Hey", "Hey! What can I do for you?"),
+    ("Hey", "Hey! What can I do for you sir?"),
     ("What do you do?", "I am here to assist you with any questions you might have."),
-    ("What's up?", "Just here to help you out. How can I assist you?"),
-    ("Can you help me?", "Of course! What do you need help with?"),
-    ("I need assistance", "Sure, tell me what you need assistance with."),
+    ("What's up?", "Just here to help you out. How can I assist you sir?"),
+    ("Can you help me?", "Of course! What do you need help with sir?"),
+    ("I need assistance", "Sure sir, tell me what you need assistance with."),
     ("What time is it?", "I can't tell time, but you can check your device's clock."),
     ("What day is it?", "I can't track dates, but your device's calendar can help."),
     ("Do you like music?", "I don't have preferences, but I can find music recommendations for you!"),
@@ -118,19 +118,15 @@ def generate_response(user_input):
             else:
                 return "Music directory not found."
 
-    elif 'the time' in user_input_tokens:
-        current_time = datetime.datetime.now().strftime("%H:%M")
-        return f"The current time is {current_time}"
-
-    elif 'thanks' or 'thank' or 'thankyou' in user_input_tokens:
-        if 'exit' or 'go' or 'bye' or 'later' in user_input:
+    elif 'thank' in user_input_tokens:
+        if 'later' in user_input:
             speak("Goodbye, sir. Have a great day!")
             exit()
 
     # Time API
     if "time" in user_input_tokens:
         current_time = datetime.datetime.now().strftime("%I:%M %p")
-        return f"The current time is {current_time}."
+        return f"The current time is {current_time}. sir "
 
     # Check for weather-related queries
     if "weather" in user_input_tokens:
