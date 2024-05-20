@@ -6,7 +6,6 @@ import wikipedia
 import webbrowser
 import os
 import requests
-import pyaudio
 
 # Initialize recognizer and text-to-speech engine
 recognizer = sr.Recognizer()

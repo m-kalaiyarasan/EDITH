@@ -1,0 +1,7 @@
+nltk
+SpeechRecognition
+pyttsx3
+datetime
+wikipedia
+requests
+pyaudio
